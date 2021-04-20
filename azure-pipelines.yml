@@ -84,8 +84,8 @@ stages:
           - task: PublishBuildArtifacts@1
             displayName: 'Azure App Service Deploy: website'
             inputs:
-              PathtoPublish: artifacts
-              ArtifactName: drop
+              PathtoPublish: '$(WebAppName)'
+              ArtifactName: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
               #azureSubscription: 'Free Trial'
               #appName: '$(WebAppName)'
               #package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
