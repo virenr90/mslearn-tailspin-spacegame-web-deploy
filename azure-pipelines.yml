@@ -84,7 +84,7 @@ stages:
           - task: PublishBuildArtifacts@1
             displayName: 'Azure App Service Deploy: website'
             inputs:
-              PathtoPublish: drop
+              PathtoPublish: artifacts
               ArtifactName: drop
               #azureSubscription: 'Free Trial'
               #appName: '$(WebAppName)'
