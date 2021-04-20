@@ -81,7 +81,7 @@ stages:
           steps:
           - download: current
             artifact: drop
-          - task: AzureWebApp@1
+          - task: AzureRmWebAppDeployment@2
             displayName: 'Azure App Service Deploy: website'
             inputs:
              azureSubscription: 'Free Trial'
